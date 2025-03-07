@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Input from "@/components/Input";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
@@ -19,8 +20,16 @@ export default function Home() {
           <form className="space-y-4">
             {/* Email*/}
             <Input type="email" label="Email" placeholder="Email" />
+
             {/* Password */}
             <Input type="password" label="Password" placeholder="Password" />
+
+            {/* Button */}
+            <Button
+              label="Masuk"
+              styleButton="bg-orange-500 text-white font-bold py-2 px-4 rounded-lg w-full"
+              onClick={() => console.log("Tombol Ditekan")}
+            />
           </form>
           <div className="flex justify-between text-sm text-gray-500 mt-2">
             {/* Lupa Kata Sandi */}
