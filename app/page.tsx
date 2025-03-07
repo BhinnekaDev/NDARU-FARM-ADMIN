@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+//COMPONENTS KAMI
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Image from "next/image";
