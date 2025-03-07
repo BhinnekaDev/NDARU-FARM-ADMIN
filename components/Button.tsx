@@ -3,7 +3,7 @@ export default function Button({
   styleButton,
   disabled,
   onClick,
-}: buttonProps) {
+}: ButtonProps) {
   return (
     <button className={styleButton} disabled={disabled} onClick={onClick}>
       {label}
