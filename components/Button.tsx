@@ -1,9 +1,10 @@
+import { buttonProps } from "@/interface/buttonProps";
 export default function Button({
   label,
   styleButton,
   disabled,
   onClick,
-}: ButtonProps) {
+}: buttonProps) {
   return (
     <button className={styleButton} disabled={disabled} onClick={onClick}>
       {label}

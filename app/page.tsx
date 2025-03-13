@@ -5,6 +5,7 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Image from "next/image";
 import Foto1 from "@/components/assets/image/Foto1.jpg";
+import { FaRegEyeSlash } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -20,17 +21,12 @@ export default function Home() {
           </p>
 
           <form className="space-y-5">
-            <Input
-              type="email"
-              label="Email"
-              placeholder="Email"
-              className="w-full text-lg p-3 border rounded-lg"
-            />
+            <Input type="email" label="Email" placeholder="Email" />
             <Input
               type="password"
               label="Password"
               placeholder="Password"
-              className="w-full text-lg p-3 border rounded-lg"
+              icon={<FaRegEyeSlash />}
             />
             <div className="flex justify-between text-sm text-gray-500 mt-3">
               <a href="#" className="text-blue-500">
