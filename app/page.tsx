@@ -8,7 +8,7 @@ import Foto1 from "@/components/assets/image/Foto1.jpg";
 
 export default function Home() {
   return (
-    <section className="h-screen flex justify-center items-center bg-green-900 px-6">
+    <section className="h-screen flex justify-center items-center bg-green-950 px-6">
       <div className="w-full max-w-[1200px] p-10 bg-white shadow-xl rounded-2xl flex flex-col md:flex-row overflow-hidden">
         {/* Bagian Kiri - Form Login */}
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
@@ -29,7 +29,7 @@ export default function Home() {
             </div>
             <Button
               label="Masuk"
-              styleButton="bg-orange-500 text-white font-bold py-2 px-6 rounded-lg w-full text-lg hover:bg-orange-600"
+              styleButton="bg-[#333836] text-white font-bold py-2 px-6 rounded-lg w-full text-lg "
               onClick={() => console.log("Tombol Ditekan")}
             />
           </form>
