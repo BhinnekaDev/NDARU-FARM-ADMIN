@@ -1,7 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import Lottie from "lottie-react";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
+import AnimasiEmail from "@/components/assets/AnimasiEmail.json";
 
 export default function Konten() {
   return (
@@ -10,6 +12,15 @@ export default function Konten() {
       <p className="text-sm md:text-base text-gray-600 mb-6">
         Masukkan email Anda untuk mendapatkan link reset password.
       </p>
+
+      {/* Tambahkan Animasi */}
+      <div className="flex justify-center mb-4">
+        <Lottie
+          animationData={AnimasiEmail}
+          className="w-48 h-48"
+          loop={true}
+        />
+      </div>
 
       <form className="space-y-5">
         <Input type="email" placeholder="Masukkan email Anda" />
