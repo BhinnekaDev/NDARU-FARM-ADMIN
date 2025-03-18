@@ -45,7 +45,7 @@ export default function Home() {
           </form>
         </div>
 
-        {/* Bagian Kanan - Gambar dengan Animasi yang Diperbaiki */}
+        {/* Bagian Kanan Gambar dengan Animasi yang Diperbaiki */}
         <motion.div
           className="hidden md:flex w-1/2 justify-center items-center"
           initial={{ scale: 0.8, opacity: 0, y: 20 }}
