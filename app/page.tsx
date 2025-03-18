@@ -1,12 +1,15 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Image from "next/image";
 import Foto1 from "@/components/assets/image/Foto1.jpg";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <section className="h-screen flex justify-center items-center bg-green-950 px-6">
       <div className="w-full max-w-[1200px] p-10 bg-white shadow-xl rounded-2xl flex flex-col md:flex-row overflow-hidden">
@@ -16,14 +19,21 @@ export default function Home() {
             Welcome back 👋
           </h2>
           <p className="text-sm md:text-base text-gray-600 text-center mb-6">
-            Silahkan Masukan Email Dan Password Anda .
+            Silahkan Masukan Email Dan Password Anda.
           </p>
 
           <form className="space-y-5">
             <Input type="email" label="Email" placeholder="Email" />
             <Input type="password" label="Password" placeholder="Password" />
             <div className="flex justify-between text-sm text-gray-500 mt-3">
-              <a href="#" className="text-blue-500">
+              <a
+                className="text-blue-500"
+                onClick={(e) => {
+                  e.preventDefault();
+                  console.log("Navigasi ke halaman lupa kata sandi");
+                  router.push("/lupaKataSandi");
+                }}
+              >
                 Lupa Kata Sandi?
               </a>
             </div>

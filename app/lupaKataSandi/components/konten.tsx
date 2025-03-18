@@ -1,11 +1,14 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import Lottie from "lottie-react";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 import AnimasiEmail from "@/components/assets/AnimasiEmail.json";
 
 export default function Konten() {
+  const router = useRouter();
+
   return (
     <div className="w-full p-6 md:p-8 text-center">
       <h2 className="text-2xl md:text-3xl font-bold">Lupa Kata Sandi?</h2>
@@ -29,8 +32,14 @@ export default function Konten() {
           styleButton="bg-[#333836] text-white font-bold py-2 px-6 rounded-lg w-full text-lg"
         />
       </form>
-
-      <a href="/login" className="text-blue-500 text-sm mt-4 inline-block">
+      <a
+        className="text-blue-500 text-sm mt-4 inline-block"
+        onClick={(e) => {
+          e.preventDefault();
+          console.log("Navigasi kembali ke halaman sebelumnya");
+          router.back();
+        }}
+      >
         Kembali ke Login
       </a>
     </div>
